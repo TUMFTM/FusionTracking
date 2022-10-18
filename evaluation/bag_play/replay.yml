@@ -1,0 +1,44 @@
+version: '2.4'
+services:
+
+# RUN2 semifinal
+  mod_tracking2:
+    image: tracking:${tracking}
+    network_mode: "host"
+    environment:
+      - ROS_DOMAIN_ID=2
+    volumes:
+      - "../../tracking/tracking/logs/:/dev_ws/install/tracking/lib/tracking/logs"
+    command: bash -c "ros2 launch tracking tracking.launch.py use_sim_time:=${Simtime} frequency:=${Frequency}"
+    cpus: 1.0
+  play2:
+    image: tumiac/base:0.0.0
+    network_mode: "host"
+    environment:
+      - ROS_DOMAIN_ID=2
+    volumes:
+      - "/home/$USER/source/FusionTracking/data/tracking_input/RUN2_semi_final:/data"
+    command: bash -c "ros2 bag play /data --read-ahead-queue-size ${Readahead} --delay ${Delay}"
+    cpus: 1.0
+
+
+# RUN3 final
+  mod_tracking3:
+    image: tracking:${tracking}
+    network_mode: "host"
+    environment:
+      - ROS_DOMAIN_ID=3
+    volumes:
+      - "../../tracking/tracking/logs/:/dev_ws/install/tracking/lib/tracking/logs"
+    command: bash -c "ros2 launch tracking tracking.launch.py use_sim_time:=${Simtime} frequency:=${Frequency}"
+    cpus: 1.0
+  play3:
+    image: tumiac/base:0.0.0
+    network_mode: "host"
+    environment:
+    - ROS_DOMAIN_ID=3
+    volumes:
+      - "/home/$USER/source/FusionTracking/data/tracking_input/RUN3_final:/data"
+    command: bash -c "ros2 bag play /data --read-ahead-queue-size ${Readahead} --delay ${Delay}"
+    cpus: 1.0
+

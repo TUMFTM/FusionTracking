@@ -1,0 +1,42 @@
+# files
+*.pkl
+*.pdf
+*.svg
+*.png
+*.mp4
+*.txt
+*.gif
+*.csv
+*.log
+*.sh
+
+# evaluation scripts
+!/evaluation/**.sh
+
+# add assets
+!assets/**
+
+# module logs
+!tracking/tracking/logs/2022_10_01/00_00_01/**
+
+# python
+**/__pycache__/**
+**/venv*/**
+!requirements.txt
+
+# ros2 builds
+**/log/**
+**/install/**
+**/build/**
+
+# mounted configs
+**/from_docker_iac/**
+evaluation/bag_play/overwrite_temp
+
+# development tools
+**/.devcontainer/**
+**/.vscode/**
+
+# data
+data/**
+!data/README.md
