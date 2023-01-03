@@ -40,3 +40,6 @@ evaluation/bag_play/overwrite_temp
 # data
 data/**
 !data/README.md
+
+# map data
+!tracking/tracking/data/map_data/**
