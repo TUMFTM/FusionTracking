@@ -115,4 +115,16 @@ The validation under real-world condition in autonomous racing with a stable obj
 The average computation time of the module during the evaluation on the given data on a single core of an Intel i7-9850H 2.60 GHz CPU is 2.75 ms with a 90%-quantile of 5.26 ms.
 
 ## References
-Phillip Karle, Felix Fent, Sebastian Huch, Florian Sauerbeck, and Markus Lienkamp "Multi-Modal Sensor Fusion and Object Tracking for Autonomous Racing" (under review)
+P. Karle, F. Fent, S. Huch, F. Sauerbeck and M. Lienkamp, "Multi-Modal Sensor Fusion and Object Tracking for Autonomous Racing," in IEEE Transactions on Intelligent Vehicles, doi: 10.1109/TIV.2023.3271624.
+
+BibTex:
+```
+@ARTICLE{Karle2023,
+  author={Karle, Phillip and Fent, Felix and Huch, Sebastian and Sauerbeck, Florian and Lienkamp, Markus},
+  journal={IEEE Transactions on Intelligent Vehicles}, 
+  title={Multi-Modal Sensor Fusion and Object Tracking for Autonomous Racing}, 
+  year={2023},
+  pages={1-13},
+  doi={10.1109/TIV.2023.3271624}
+}
+```
